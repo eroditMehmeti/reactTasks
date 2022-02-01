@@ -1,0 +1,23 @@
+.App {
+  background-color: rgb(245, 247, 248);
+  height: 100vh;
+}
+.container {
+  height: 100%;
+}
+
+/* #title{
+     color: black; 
+} */
+/* .List-Box {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(80, 220, 255);
+  height: 50vh;
+  flex-wrap: wrap;
+}
+
+#list {
+  background-color: cadetblue;
+  text-align-last: left;
+} */
