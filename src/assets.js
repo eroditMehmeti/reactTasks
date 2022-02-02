@@ -8,5 +8,6 @@ const assetsObject = {
   salesImg: require("./images/sales.png"),
   tImg: require("./images/T.png"),
   lightImg: require("./images/light.png"),
+  woman: require("./images/woman.jpg"),
 };
 module.exports = assetsObject;
