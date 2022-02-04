@@ -1,5 +1,6 @@
 import React from "react";
 import assetsObject from "../assets";
+
 const ThumbNail = ({ obj }) => {
   return (
     <div

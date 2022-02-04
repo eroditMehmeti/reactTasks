@@ -3,6 +3,11 @@ import Item from "./components/Item";
 import "./list.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ThumbNail from "./components/thumbnails";
+import Services from "./components/services";
+
+import "react-tabs/style/react-tabs.css";
+import { tab } from "@testing-library/user-event/dist/tab";
+import { Tabs } from "react-tabs";
 
 // import icons from "homeIcon";
 
@@ -74,7 +79,8 @@ function App() {
       btnColor: "#001BFB",
       img: "woman",
       fullName: "Kevin Joe",
-      description: "Introducing Host Cloud Drive-virtual drive functionality New Share options and management New,more user friendly design Sync optimizations Various performance improvements and bug fixes",
+      description:
+        "Introducing Host Cloud Drive-virtual drive functionality New Share options and management New,more user friendly design Sync optimizations Various performance improvements and bug fixes",
     },
     {
       date: "20/05/2015",
@@ -83,7 +89,8 @@ function App() {
       img: "woman",
       btnColor: "#BE00FB",
       fullName: "Kevin Joe",
-      description: "Introducing Host Cloud Drive-virtual drive functionality New Share options and management New,more user friendly design Sync optimizations Various performance improvements and bug fixes",
+      description:
+        "Introducing Host Cloud Drive-virtual drive functionality New Share options and management New,more user friendly design Sync optimizations Various performance improvements and bug fixes",
     },
     {
       date: "14/05/2018",
@@ -92,7 +99,8 @@ function App() {
       btnColor: "#58FB00",
       img: "woman",
       fullName: "Kevin Joe",
-      description: "File system changed from Dokan to CBFS Host Cloud Drive is now a network drive Various bug fixes and stability improvments Share permission re-design and optimization",
+      description:
+        "File system changed from Dokan to CBFS Host Cloud Drive is now a network drive Various bug fixes and stability improvments Share permission re-design and optimization",
     },
     {
       date: "14/05/2018",
@@ -101,7 +109,8 @@ function App() {
       btnColor: "#001BFB",
       img: "woman",
       fullName: "Kevin Joe",
-      description: "Introducing Host Cloud Drive-virtual drive functionality New Share options and management New,more user friendly design Sync optimizations Various performance improvements and bug fixes",
+      description:
+        "Introducing Host Cloud Drive-virtual drive functionality New Share options and management New,more user friendly design Sync optimizations Various performance improvements and bug fixes",
     },
     {
       date: "14/05/2018",
@@ -110,7 +119,8 @@ function App() {
       btnName: "New",
       btnColor: "#BE00FB",
       fullName: "Kevin Joe",
-      description: "File system changed from Dokan to CBFS Host Cloud Drive is now a network drive Various bug fixes and stability improvments Share permission re-design and optimization",
+      description:
+        "File system changed from Dokan to CBFS Host Cloud Drive is now a network drive Various bug fixes and stability improvments Share permission re-design and optimization",
     },
     {
       date: "14/05/2018",
@@ -119,7 +129,8 @@ function App() {
       btnColor: "#58FB00",
       btnName: "New",
       fullName: "Kevin Joe",
-      description: "File system changed from Dokan to CBFS Host Cloud Drive is now a network drive Various bug fixes and stability improvments Share permission re-design and optimization",
+      description:
+        "File system changed from Dokan to CBFS Host Cloud Drive is now a network drive Various bug fixes and stability improvments Share permission re-design and optimization",
     },
     {
       date: "14/05/2018",
@@ -128,7 +139,8 @@ function App() {
       btnColor: "#001BFB",
       img: "woman",
       fullName: "Kevin Joe",
-      description: "Introducing Host Cloud Drive-virtual drive functionality New Share options and management New,more user friendly design Sync optimizations Various performance improvements and bug fixes",
+      description:
+        "Introducing Host Cloud Drive-virtual drive functionality New Share options and management New,more user friendly design Sync optimizations Various performance improvements and bug fixes",
     },
     {
       date: "14/05/2018",
@@ -137,7 +149,42 @@ function App() {
       btnColor: "#BE00FB",
       btnName: "New",
       fullName: "Kevin Joe",
-      description: "File system changed from Dokan to CBFS Host Cloud Drive is now a network drive Various bug fixes and stability improvments Share permission re-design and optimization",
+      description:
+        "File system changed from Dokan to CBFS Host Cloud Drive is now a network drive Various bug fixes and stability improvments Share permission re-design and optimization",
+    },
+  ];
+
+  const serviceCards = [
+    {
+      title: "Domains",
+      text: "domains ",
+      items: [
+        {
+          title: ".com",
+          price: "6$",
+          description: "whatever",
+        },
+      ],
+    },
+    {
+      title: "Web Hosting",
+      items: [
+        {
+          title: ".com",
+          price: "5$",
+          description: "whatever",
+        },
+      ],
+    },
+    {
+      title: "Dedicated Servers",
+      items: [
+        {
+          title: ".com",
+          price: "7$",
+          description: "whatever",
+        },
+      ],
     },
   ];
 
@@ -159,6 +206,15 @@ function App() {
           {thumbnails.map((element) => (
             <ThumbNail obj={element} />
           ))}
+        </div>
+
+        <div className="row">
+          <div className="NavBar">
+            <Services
+              tabs={serviceCards.map((card) => card.title)}
+              tabsContent={serviceCards.map((card) => card.items)}
+            />
+          </div>
         </div>
       </div>
     </div>
