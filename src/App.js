@@ -157,12 +157,30 @@ function App() {
   const serviceCards = [
     {
       title: "Domains",
-      text: "domains ",
       items: [
         {
-          title: ".com",
-          price: "6$",
-          description: "whatever",
+          title: ".Com",
+          price: "$5.99/yr",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".AL",
+          price: "$55.99/yr",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".NET",
+          price: "$7.99/yr",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".HEALTH",
+          price: "$8.99/yr",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
         },
       ],
     },
@@ -172,7 +190,8 @@ function App() {
         {
           title: ".com",
           price: "5$",
-          description: "whatever",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
         },
       ],
     },
@@ -180,9 +199,65 @@ function App() {
       title: "Dedicated Servers",
       items: [
         {
+          title: "Dedicated Servers",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+      ],
+    },
+    {
+      title: "Virtual Cloud Servers",
+      items: [
+        {
           title: ".com",
           price: "7$",
-          description: "whatever",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+      ],
+    },
+    {
+      title: "WordPress Hosting",
+      items: [
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+      ],
+    },
+    {
+      title: "Email Hosting",
+      items: [
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+      ],
+    },
+    {
+      title: "VPS Hosting Servers",
+      items: [
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+      ],
+    },
+    {
+      title: "Free Hosting",
+      items: [
+        {
+          title: ".HEALTH",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
         },
       ],
     },
@@ -208,7 +283,7 @@ function App() {
           ))}
         </div>
 
-        <div className="row">
+        <div className="row ">
           <div className="NavBar">
             <Services
               tabs={serviceCards.map((card) => card.title)}

@@ -5,19 +5,8 @@
 .container {
   height: 100%;
 }
+.NavBar {
+  height: 100vh;
 
-/* #title{
-     color: black; 
-} */
-/* .List-Box {
-  display: flex;
-  justify-content: center;
-  background-color: rgb(80, 220, 255);
-  height: 50vh;
-  flex-wrap: wrap;
+  background-color: rgb(245, 247, 248);
 }
-
-#list {
-  background-color: cadetblue;
-  text-align-last: left;
-} */
