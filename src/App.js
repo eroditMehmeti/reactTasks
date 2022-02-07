@@ -182,11 +182,35 @@ function App() {
           description: "instead of$10.99/yr",
           button: "Buy Now",
         },
+        {
+          title: ".Com",
+          price: "$5.99/yr",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".AL",
+          price: "$55.99/yr",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
       ],
     },
     {
       title: "Web Hosting",
       items: [
+        {
+          title: ".com",
+          price: "5$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "5$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
         {
           title: ".com",
           price: "5$",
@@ -259,6 +283,18 @@ function App() {
           description: "instead of$10.99/yr",
           button: "Buy Now",
         },
+        {
+          title: ".HEALTH",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".HEALTH",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
       ],
     },
   ];
@@ -284,12 +320,10 @@ function App() {
         </div>
 
         <div className="row ">
-          <div className="NavBar">
-            <Services
-              tabs={serviceCards.map((card) => card.title)}
-              tabsContent={serviceCards.map((card) => card.items)}
-            />
-          </div>
+          <Services
+            tabs={serviceCards.map((card) => card.title)}
+            tabsContent={serviceCards.map((card) => card.items)}
+          />
         </div>
       </div>
     </div>

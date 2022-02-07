@@ -6,12 +6,12 @@ import "../list.css";
 
 const ItemCard = ({ title, price, description, button }) => {
   return (
-    <div class="card" style={{ width: "18rem" }}>
-      <div class="card-body justify-content-space-between">
-        <h2 class="card-title">{title}</h2>
-        <h3 class="card-text">{price}</h3>
-        <h4 class="card-text">{description}</h4>
-        <button class="btn btn-outline-primary">{button}</button>
+    <div class="card d-flex border-0" style={{ width: "25%", height: "200px" }}>
+      <div class="card-body flex-wrap flex-direction-row ">
+        <h3 class="card-title">{title}</h3>
+        <h5 class="card-text">{price}</h5>
+        <p class="card-text">{description}</p>
+        <button class="btn btn-outline-primary col-12">{button}</button>
       </div>
     </div>
   );
@@ -19,24 +19,29 @@ const ItemCard = ({ title, price, description, button }) => {
 
 const Services = ({ tabs, tabsContent }) => {
   return (
-    <div className="NavBar ">
-      <div className=" row align-items-start d-flex flex-basics-auto  ">
-        <Tabs className="bg-light">
-          <TabList>
-            {tabs.map((tab) => (
-              <Tab> {tab} </Tab>
-            ))}
-          </TabList>
-
-          {tabsContent.map((items) => (
-            <TabPanel className="justify-content-spacebetween">
-              {items.map((item) => (
-                <ItemCard class="card-text" {...item} />
-              ))}
-            </TabPanel>
+    <div className="NavBar">
+      <Tabs
+        className=""
+        style={{
+          height: "100%",
+          padding: "20px 20px",
+          backgorundColor: "rgb(245, 247, 248)",
+        }}
+      >
+        <TabList className=" text-decoration-none">
+          {tabs.map((tab) => (
+            <Tab> {tab} </Tab>
           ))}
-        </Tabs>
-      </div>
+        </TabList>
+
+        {tabsContent.map((items) => (
+          <TabPanel className="d-flex" style={{ padding: "30px 30px" }}>
+            {items.map((item) => (
+              <ItemCard className="" {...item} />
+            ))}
+          </TabPanel>
+        ))}
+      </Tabs>
     </div>
   );
 };
