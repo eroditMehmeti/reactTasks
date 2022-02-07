@@ -2,14 +2,14 @@ import "./App.css";
 import Item from "./components/Item";
 import "./list.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle";
 import ThumbNail from "./components/thumbnails";
 import Services from "./components/services";
-
+import { useState } from "react";
+import helper from "./helper/helper";
 import "react-tabs/style/react-tabs.css";
 import { tab } from "@testing-library/user-event/dist/tab";
 import { Tabs } from "react-tabs";
-
-// import icons from "homeIcon";
 
 function App() {
   const names = [
@@ -156,6 +156,9 @@ function App() {
 
   const serviceCards = [
     {
+      id: "nav-domain",
+      ariaLabelledby: "nav-domain-tab",
+      class: "tab-pane fade show active",
       title: "Domains",
       items: [
         {
@@ -194,10 +197,25 @@ function App() {
           description: "instead of$10.99/yr",
           button: "Buy Now",
         },
+        {
+          title: ".Com",
+          price: "$5.99/yr",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".AL",
+          price: "$55.99/yr",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
       ],
     },
     {
+      id: "nav-webHosting",
+      ariaLabelledby: "nav-webHosting-tab",
       title: "Web Hosting",
+      class: "tab-pane fade",
       items: [
         {
           title: ".com",
@@ -217,11 +235,86 @@ function App() {
           description: "instead of$10.99/yr",
           button: "Buy Now",
         },
+        {
+          title: ".com",
+          price: "5$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "5$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "5$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "5$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "5$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
       ],
     },
     {
+      id: "nav-dedicatedServers",
+      ariaLabelledby: "nav-dedicatedServers-tab",
+      class: "tab-pane fade",
       title: "Dedicated Servers",
       items: [
+        {
+          title: "Dedicated Servers",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: "Dedicated Servers",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: "Dedicated Servers",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: "Dedicated Servers",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: "Dedicated Servers",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: "Dedicated Servers",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: "Dedicated Servers",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
         {
           title: "Dedicated Servers",
           price: "7$",
@@ -231,8 +324,53 @@ function App() {
       ],
     },
     {
+      id: "nav-virtualCloudServer",
+      ariaLabelledby: "nav-virtualCloudServer-tab",
       title: "Virtual Cloud Servers",
+      class: "tab-pane fade",
       items: [
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
         {
           title: ".com",
           price: "7$",
@@ -242,8 +380,53 @@ function App() {
       ],
     },
     {
+      id: "nav-wordPressHosting",
+      ariaLabelledby: "nav-wordPressHosting-tab",
       title: "WordPress Hosting",
+      class: "tab-pane fade",
       items: [
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
         {
           title: ".com",
           price: "7$",
@@ -253,8 +436,53 @@ function App() {
       ],
     },
     {
+      id: "nav-emailHosting",
+      ariaLabelledby: "nav-emailHosting-tab",
       title: "Email Hosting",
+      class: "tab-pane fade",
       items: [
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
         {
           title: ".com",
           price: "7$",
@@ -264,8 +492,53 @@ function App() {
       ],
     },
     {
+      id: "nav-vpsHostingServer",
+      ariaLabelledby: "nav-vpsHostingServer-tab",
       title: "VPS Hosting Servers",
+      class: "tab-pane fade",
       items: [
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".com",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
         {
           title: ".com",
           price: "7$",
@@ -275,8 +548,41 @@ function App() {
       ],
     },
     {
+      id: "nav-freeHostings",
+      ariaLabelledby: "nav-freeHostings-tab",
       title: "Free Hosting",
+      class: "tab-pane fade",
       items: [
+        {
+          title: ".HEALTH",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".HEALTH",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".HEALTH",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".HEALTH",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
+        {
+          title: ".HEALTH",
+          price: "7$",
+          description: "instead of$10.99/yr",
+          button: "Buy Now",
+        },
         {
           title: ".HEALTH",
           price: "7$",
@@ -299,9 +605,14 @@ function App() {
     },
   ];
 
+  const [show, setShow] = useState(false);
+
   return (
     <div className="App">
-      <div className="container">
+      <div
+        className="container"
+        style={{ backgroundColor: "rgb(245, 247, 248)" }}
+      >
         <div className="row">
           <div className="d-flex flex-wrap align-items-center justify-content-between text-center min-vh-100  text-sm-start">
             {names.map((name) => (
@@ -319,12 +630,78 @@ function App() {
           ))}
         </div>
 
-        <div className="row ">
-          <Services
-            tabs={serviceCards.map((card) => card.title)}
-            tabsContent={serviceCards.map((card) => card.items)}
-          />
+        <div className="row" style={{ backgroundColor: "rgb(245, 247, 248)" }}>
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                {helper.tabs.map((element, key) => {
+                  return (
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class={element.class}
+                        id={element.id}
+                        data-bs-toggle="tab"
+                        data-bs-target={element.dataBsTarget}
+                        type="button"
+                        role="tab"
+                        aria-controls={element.ariaControls}
+                        aria-selected="true"
+                      >
+                        {element.name}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            {serviceCards.map((element, key) => {
+              return (
+                <div
+                  class={element.class}
+                  id={element.id}
+                  role="tabpanel"
+                  aria-labelledby={element.ariaLabelledby}
+                >
+                  <div className="row mt-4">
+                    {element.items.map((item) => {
+                      return (
+                        <div className="col-lg-3 mb-4">
+                          <Services
+                            title={item.title}
+                            price={item.price}
+                            description={item.description}
+                            button={item.button}
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
+
+        {/* <div className="Toggle">
+          {
+            <div>
+              <h4>Why park a domain name in Parknameee</h4>
+              <button onClick={() => setShow(!show)}>Toggle</button>
+            </div>
+          }
+          {show ? (
+            <div>
+              <p>Why park a domain name in Parkname</p>
+              <hr></hr>
+              <p>
+                Parkname is the leading industry standard for domain name
+                parking and monetai
+              </p>
+            </div>
+          ) : null}
+        </div> */}
       </div>
     </div>
   );
