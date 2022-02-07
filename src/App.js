@@ -624,11 +624,16 @@ function App() {
             ))}
           </div>
         </div>
+
         <div className="row">
           {thumbnails.map((element) => (
             <ThumbNail obj={element} />
           ))}
         </div>
+
+        <br />
+        <h2>Task-2.0</h2>
+        <br />
 
         <div className="row" style={{ backgroundColor: "rgb(245, 247, 248)" }}>
           <nav>
@@ -684,24 +689,31 @@ function App() {
           </div>
         </div>
 
-        {/* <div className="Toggle">
+        <br />
+        <h2>Task-2.1</h2>
+        <br />
+
+        <div className="Toggle">
           {
             <div>
-              <h4>Why park a domain name in Parknameee</h4>
-              <button onClick={() => setShow(!show)}>Toggle</button>
+              <button
+                aria-expanded="false"
+                class="btn btn-outline-secondary"
+                type="button"
+                onClick={() => setShow(!show)}
+              >
+                Why park a domain name in Parkname ?
+              </button>
             </div>
           }
           {show ? (
-            <div>
-              <p>Why park a domain name in Parkname</p>
-              <hr></hr>
-              <p>
-                Parkname is the leading industry standard for domain name
-                parking and monetai
-              </p>
+            <div class="card card-body">
+              Parkname is the leading industry standard for domain name parking
+              and monetization services.We offer a wide variety of services to
+              help you achive success.
             </div>
           ) : null}
-        </div> */}
+        </div>
       </div>
     </div>
   );
