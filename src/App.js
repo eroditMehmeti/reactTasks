@@ -606,6 +606,7 @@ function App() {
   ];
 
   const [show, setShow] = useState(false);
+  const [OpenModal, setOpenModal] = useState(false);
 
   return (
     <div className="App">
@@ -613,7 +614,18 @@ function App() {
         className="container"
         style={{ backgroundColor: "rgb(245, 247, 248)" }}
       >
-        <div className="row">
+        <h1>Hey click me button</h1>
+        <button
+          className="openModalBtn"
+          onClick={() => {
+            setOpenModal(true);
+          }}
+        >
+          Open
+        </button>
+        <modal />
+
+        {/* <div className="row">
           <div className="d-flex flex-wrap align-items-center justify-content-between text-center min-vh-100  text-sm-start">
             {names.map((name) => (
               <Item
@@ -712,8 +724,7 @@ function App() {
               and monetization services.We offer a wide variety of services to
               help you achive success.
             </div>
-          ) : null}
-        </div>
+          ) : null} </div> */}
       </div>
     </div>
   );
