@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import ThumbNail from "./components/thumbnails";
 import Services from "./components/services";
+import Modal from "./components/Modal";
 import { useState } from "react";
 import helper from "./helper/helper";
 import "react-tabs/style/react-tabs.css";
@@ -623,7 +624,7 @@ function App() {
         >
           Open
         </button>
-        <modal />
+        {OpenModal && <Modal closeModal={setOpenModal} />}
 
         {/* <div className="row">
           <div className="d-flex flex-wrap align-items-center justify-content-between text-center min-vh-100  text-sm-start">
