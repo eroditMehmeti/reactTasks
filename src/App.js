@@ -611,21 +611,19 @@ function App() {
 
   return (
     <div className="App">
+      <button
+        className="openModalBtn"
+        onClick={() => {
+          setOpenModal(true);
+        }}
+      >
+        show popup
+      </button>
+      {OpenModal && <Modal closeModal={setOpenModal} />}
       <div
         className="container"
         style={{ backgroundColor: "rgb(245, 247, 248)" }}
       >
-        <h1>Hey click me button</h1>
-        <button
-          className="openModalBtn"
-          onClick={() => {
-            setOpenModal(true);
-          }}
-        >
-          Open
-        </button>
-        {OpenModal && <Modal closeModal={setOpenModal} />}
-
         {/* <div className="row">
           <div className="d-flex flex-wrap align-items-center justify-content-between text-center min-vh-100  text-sm-start">
             {names.map((name) => (

@@ -1,0 +1,141 @@
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(200, 200, 200);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer {
+  width: 900px;
+  height: 600px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.modalContainer .title {
+  display: inline-flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.modalContainer .body {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 1.7rem;
+  text-align: center;
+}
+.FirstP,
+.SecondP,
+.ThirdP,
+.FourthP,
+.FifthP {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid rgb(190, 184, 184);
+}
+#first {
+  border-radius: 15%;
+
+  width: 70px;
+
+  height: 30px;
+
+  background-color: #444444;
+}
+
+#second {
+  border-radius: 15%;
+  border-style: solid;
+  border-color: rgba(200, 200, 200);
+  width: 70px;
+  height: 30px;
+
+  background-color: #ffffff;
+}
+
+#third {
+  border-radius: 15%;
+
+  width: 70px;
+
+  height: 30px;
+
+  background-color: #2072ef;
+}
+
+#fourth {
+  border-radius: 15%;
+
+  width: 70px;
+
+  height: 30px;
+
+  background-color: #2072ef;
+}
+
+#fifth {
+  border-radius: 15%;
+
+  width: 70px;
+
+  height: 30px;
+
+  background-color: #0053d1;
+}
+
+.Color1,
+.Color2,
+.Color3,
+.Color4,
+.Color5 {
+  display: flex;
+  flex-direction: row;
+}
+.modalContainer .footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  margin-top: 6%;
+  justify-content: end;
+}
+
+.modalContainer .footer button {
+  width: 150px;
+  height: 45px;
+  margin: 10px;
+  border: none;
+  background-color: #6495ed;
+  color: white;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#cancelBtn {
+  background-color: rgba(204, 198, 198, 0.287);
+  color: black;
+}
